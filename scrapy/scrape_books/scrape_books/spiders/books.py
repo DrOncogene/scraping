@@ -34,7 +34,7 @@ class BooksSpider(scrapy.Spider):
         self.page += 1
         print(f"SCRAPING PAGE {self.page}...")
 
-        books_on_page = response.css('.product_pod .image_container a::attr(href)').getall()
+        books_on_page = response.css('.product_pod h3 a::attr(href)').getall()
         next_page = response.css('li.next a::attr(href)').get()
 
         for book in books_on_page:

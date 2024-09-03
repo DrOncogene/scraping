@@ -5,7 +5,6 @@ from scrapy.loader import ItemLoader
 from scrapy.responsetypes import Response
 from scrapy_splash import SplashRequest, SplashResponse
 from itemloaders.processors import TakeFirst, MapCompose
-from scrapy.selector import Selector
 
 from scrape_books_splash.items import Book
 
